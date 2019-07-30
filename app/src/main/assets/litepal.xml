@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="hello_weather"/>
+    <version value="1"/>
+    <list>
+        <mapping class="com.helloweather.android.hello_db.Province"/>
+        <mapping class="com.helloweather.android.hello_db.Location"/>
+        <mapping class="com.helloweather.android.hello_db.County"/>
+    </list>
+</litepal>
