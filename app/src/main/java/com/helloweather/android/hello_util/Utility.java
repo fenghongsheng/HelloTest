@@ -2,7 +2,6 @@ package com.helloweather.android.hello_util;
 
 import android.text.TextUtils;
 
-import com.google.gson.JsonObject;
 import com.helloweather.android.hello_db.County;
 import com.helloweather.android.hello_db.Location;
 import com.helloweather.android.hello_db.Province;
