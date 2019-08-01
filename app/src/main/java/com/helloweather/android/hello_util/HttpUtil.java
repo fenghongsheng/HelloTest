@@ -1,5 +1,11 @@
 package com.helloweather.android.hello_util;
 
+import com.google.gson.Gson;
+import com.helloweather.android.hello_gson.Weather;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
@@ -11,4 +17,5 @@ public class HttpUtil {
                 .build();
         client.newCall(request).enqueue(callback);
     }
+
 }

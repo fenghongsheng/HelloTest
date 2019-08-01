@@ -2,9 +2,11 @@ package com.helloweather.android.hello_util;
 
 import android.text.TextUtils;
 
+import com.google.gson.Gson;
 import com.helloweather.android.hello_db.County;
 import com.helloweather.android.hello_db.Location;
 import com.helloweather.android.hello_db.Province;
+import com.helloweather.android.hello_gson.Weather;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -66,5 +68,16 @@ public class Utility {
             }
         }
         return false;
+    }
+    public static Weather handleWeatherResponse(String response){
+        try{
+            JSONObject jsonObject=new JSONObject(response);
+            JSONArray jsonArray=jsonObject.getJSONArray("HeWeather6");
+            String weatherContext=jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContext,Weather.class);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
     }
 }
