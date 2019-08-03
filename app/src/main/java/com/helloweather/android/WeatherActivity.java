@@ -1,5 +1,6 @@
 package com.helloweather.android;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -23,6 +24,7 @@ import com.bumptech.glide.Glide;
 import com.helloweather.android.hello_gson.Forecast;
 import com.helloweather.android.hello_gson.Lifestyle;
 import com.helloweather.android.hello_gson.Weather;
+import com.helloweather.android.hello_service.AutoUpdateService;
 import com.helloweather.android.hello_util.HttpUtil;
 import com.helloweather.android.hello_util.Utility;
 
@@ -186,5 +188,7 @@ public class WeatherActivity extends AppCompatActivity {
             txtText.setText(lifestyle.txt);
         }
         weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent=new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 }
