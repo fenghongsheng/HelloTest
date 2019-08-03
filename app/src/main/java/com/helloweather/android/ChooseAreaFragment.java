@@ -22,7 +22,6 @@ import com.helloweather.android.hello_db.Province;
 import com.helloweather.android.hello_util.HttpUtil;
 import com.helloweather.android.hello_util.Utility;
 
-import org.json.JSONArray;
 import org.litepal.crud.DataSupport;
 
 import java.io.IOException;
@@ -104,7 +103,7 @@ public class ChooseAreaFragment extends Fragment {
         queryProvinces();
     }
     private void queryProvinces(){
-        titleText.setText("奥特曼");
+        titleText.setText("中国");
         backButton.setVisibility(View.GONE);
         provinceList= DataSupport.findAll(Province.class);
         if(provinceList.size()>0){
